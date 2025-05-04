@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('images/bg_city.png') no-repeat center center fixed;
+  background-size: cover;
+  cursor: url('images/slipper.png') 0 0, pointer;
+  user-select: none;
+}
+
+#game-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000088;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#start-button {
+  display: block;
+  margin: 10px auto;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#info {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+#status-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#status-bar span, #status-bar button {
+  cursor: pointer;
+  user-select: none;
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: #e0e0e0;
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: none;
+}
+
+#game-area * {
+  cursor: none !important;
+}
+
+#custom-cursor {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  pointer-events: none;
+  z-index: 10000;
+  user-select: none;
+}
+
+.cockroach {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: url('images/slipper.png'), pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.cockroach.dead {
+  pointer-events: none;
+  opacity: 0.6;
+  transform: rotate(90deg);
+}
+
+#install-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 10px auto;
+  display: block;
+  max-width: 200px;
+  text-align: center;
+}
+
+#install-button:hover {
+  background-color: #45a049;
+}
+
+#game-over-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#game-over-box.hidden {
+  display: none;
+}
+
+#game-over-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px #000000aa;
+}
+
+#game-over-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+#game-over-content p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+#restart-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+#restart-button:hover {
+  background-color: #45a049;
+}

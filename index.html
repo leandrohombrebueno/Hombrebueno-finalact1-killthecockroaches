@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cockroach Swat Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div id="game-container">
+    <h1>Cockroach Swat Game</h1>
+    <button id="start-button">Start 🐞</button>
+    <div id="info">
+      <p>How to play: Click on the cockroaches to swat them before they escape!</p>
+    </div>
+    <div id="status-bar">
+      <span id="mute-toggle" title="Mute/Unmute Audio" role="button" tabindex="0">🔈</span>
+      <span id="timer">⏰ 0s</span>
+      <span id="kill-count">Dead Cockroaches: 0</span>
+      <span id="spawn-rate-indicator" title="Spawn rate increases every 10 seconds">⏩</span>
+      <span id="internet-status">🌐</span>
+    </div>
+    <div id="game-area">
+      <img id="custom-cursor" src="images/slipper.png" alt="cursor" style="display:none;" />
+    </div>
+    <div id="game-over-box" class="hidden">
+      <div id="game-over-content">
+        <h2>Game Over!</h2>
+        <p id="final-score"></p>
+        <p id="high-score"></p>
+        <button id="restart-button">Play Again</button>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top: 10px;">
+    <button id="install-button" style="display:none;">Install App ⬇️</button>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
